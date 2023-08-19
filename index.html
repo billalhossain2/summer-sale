@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Summer Sale</title>
+    <!-- fontawesom icons  -->
+    <script
+      src="https://kit.fontawesome.com/5cb82b043a.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,22 +27,274 @@
     <!-- custom css  -->
     <link rel="stylesheet" href="css/summer-sale.css" />
   </head>
-  <body style="font-family: 'Work Sans', sans-serif;">
-    <header>
-        <div class="hero min-h-screen">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-              <img src="./images/Summer1.png" class="max-w-sm rounded-lg" />
-              <div>
-                <p class="font-medium text-3xl mb-10">---SALE FEVER---</p>
-                <h1 class="text-6xl font-bold mb-16">Purchase TK 200 or <br> above & get <span class="text-[#E527B2]">20% off</span></h1>
-                <p class="py-6">
-                    <span class="font-medium text-2xl">Use Promo Code</span>
-                    <button class="btn btn-sm btn-success bg-[#E527B2] hover:bg-[#e5278f] text-white border-0">SELL200</button>
-                </p>
-              </div>
+  <body style="font-family: 'Work Sans', sans-serif" class="bg-[#F8F8F8]">
+    <header class="bg-[#F9F6E2] mb-[120px]">
+      <div class="hero min-h-screen">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="./images/Summer1.png" class="lg:max-w-sm md:max-w-[80%]" />
+          <div>
+            <p class="font-medium text-3xl mb-10">---SALE FEVER---</p>
+            <h1 class="lg:text-6xl md:text-5xl text-3xl font-bold mb-16">
+              Purchase TK 200 or <br />
+              above & get <span class="text-[#E527B2]">20% off</span>
+            </h1>
+            <p class="py-6">
+              <span class="font-medium text-2xl">Use Promo Code</span>
+              <button
+                class="btn btn-sm btn-success bg-[#E527B2] hover:bg-[#e5278f] text-white border-0"
+              >
+                SELL200
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-[80%] mx-auto flex lg:flex-row flex-col-reverse gap-5">
+      <div class="categories-wrapper">
+        <!-- category - Kitchenware  -->
+        <h1 class="font-semibold text-[40px] mb-8">Kitchenware</h1>
+        <div class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14">
+          <!-- card-1  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod1.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">K. Accessories</p>
+              <p class="text-[20px]">39.00 TK</p>
             </div>
           </div>
-    </header>
+          <!-- card-2  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod2.png"
+                alt="prod2"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">K. Accessories</p>
+              <p class="text-[20px]">25.00 TK</p>
+            </div>
+          </div>
+          <!-- card-3  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod3.png"
+                alt="prod3"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Home Cooker</p>
+              <p class="text-[20px]">49.00 TK</p>
+            </div>
+          </div>
+        </div>
+        <!-- category - Sportswear  -->
+        <h1 class="font-semibold text-[40px] mb-8">Sportswear</h1>
+        <div class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14">
+          <!-- card-1  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod4.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Sports Back Cap</p>
+              <p class="text-[20px]">49.00 TK</p>
+            </div>
+          </div>
+          <!-- card-2  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod5.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Full Jersey Set</p>
+              <p class="text-[20px]">69.00 TK</p>
+            </div>
+          </div>
+          <!-- card-3  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod6.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Sports cates</p>
+              <p class="text-[20px]">159.00 TK</p>
+            </div>
+          </div>
+        </div>
+        <!-- category - Furniture  -->
+        <h1 class="font-semibold text-[40px] mb-8">Furniture</h1>
+        <div class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14">
+          <!-- card-1  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod7.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-regular fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Single Relax Chair</p>
+              <p class="text-[20px]">185.00 TK</p>
+            </div>
+          </div>
+          <!-- card-2  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod8.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Children play</p>
+              <p class="text-[20px]">299.00 TK</p>
+            </div>
+          </div>
+          <!-- card-3  -->
+          <div class="card bg-[#FFF]">
+            <figure class="px-10 pt-10">
+              <img
+                src="/images/prod9.png"
+                alt="prod1"
+                class="bg-[#1111110D] w-[100%] min-h-[190px]"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+                <i class="fa-solid fa-star text-[#FFC107]"></i>
+              </h2>
+              <p class="font-semibold text-[20px]">Flexible Sofa</p>
+              <p class="text-[20px]">339.00 TK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- shopping cart start -->
+      <div class="shopping-cart-container lg:mt-24">
+        <!-- coupon code  -->
+        <div class="form-control bg-[#fff] pb-5 px-5">
+          <label class="label">
+            <span class="label-text font-medium text-2xl">Have coupon?</span>
+          </label>
+          <label class="input-group">
+            <input
+              class="max-w-[120px] border-0 outline-none"
+              type="text"
+              placeholder="Coupon code"
+              class="input input-bordered"
+            />
+            <span class="text-[20px] font-semibold bg-[#E527B2] text-white cursor-pointer py-2">Apply</span>
+          </label>
+        </div>
+
+        <!-- cart  -->
+        <div class="cart bg-[#fff] mt-5 p-5">
+          <div class="products-titles-container">
+            <p class="font-medium text-2xl">1. Home Coocker</p>
+            <p class="font-medium text-2xl">1. Home Coocker</p>
+            <p class="font-medium text-2xl">1. Home Coocker</p>
+            <p class="font-medium text-2xl">1. Home Coocker</p>
+            <p class="font-medium text-2xl">1. Home Coocker</p>
+          </div>
+          <hr class="my-3">
+          <div class="product-pricing-container">
+            <p class="text-[20px] font-medium"><span class="">Total price: </span><span class="text-[gray]">257.00TK</span></p>
+            <p class="text-[20px] font-medium"><span class="">Discount: </span><span class="text-[gray]">51.40TK</span></p>
+            <p class="text-[20px] font-medium"><span class="">Total: </span><span class="text-[gray]">205.60TK</span></p>
+          </div>
+          <hr class="my-3">
+          <button class="px-5 py-2 rounded-lg text-white w-[100%] bg-[#E527B2] hover:bg-[#e52770] font-semibold text-[20px]">Make Purchase</button>
+        </div>
+      </div>
+      <!-- shopping cart end -->
+    </main>
     <script src="js/summer-sale.js"></script>
   </body>
 </html>
