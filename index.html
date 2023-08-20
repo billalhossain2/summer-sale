@@ -41,7 +41,7 @@
             <p class="py-6">
               <span class="font-medium text-2xl">Use Promo Code</span>
               <button
-                class="btn btn-sm btn-success bg-[#E527B2] hover:bg-[#e5278f] text-white border-0"
+                class="btn btn-sm btn-success bg-[#E527B2] hover:bg-[#e5278f] text-white border-0 cursor-default"
               >
                 SELL200
               </button>
@@ -51,13 +51,22 @@
       </div>
     </header>
 
-    <main class="max-w-[80%] mx-auto flex lg:flex-row flex-col-reverse gap-5">
+    <main
+      class="max-w-[80%] mx-auto flex lg:flex-row flex-col-reverse gap-5"
+      id="categories-wrapper"
+    >
       <div class="categories-wrapper">
         <!-- category - Kitchenware  -->
         <h1 class="font-semibold text-[40px] mb-8">Kitchenware</h1>
-        <div class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14">
+        <div
+          class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14"
+        >
           <!-- card-1  -->
-          <div class="card bg-[#FFF]">
+          <div
+            onclick="addtoCart(this)"
+            onclick="addtoCart(this)"
+            class="card bg-[#FFF] cursor-pointer"
+          >
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod1.png"
@@ -78,7 +87,7 @@
             </div>
           </div>
           <!-- card-2  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod2.png"
@@ -99,7 +108,7 @@
             </div>
           </div>
           <!-- card-3  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod3.png"
@@ -122,9 +131,11 @@
         </div>
         <!-- category - Sportswear  -->
         <h1 class="font-semibold text-[40px] mb-8">Sportswear</h1>
-        <div class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14">
+        <div
+          class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14"
+        >
           <!-- card-1  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod4.png"
@@ -145,7 +156,7 @@
             </div>
           </div>
           <!-- card-2  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod5.png"
@@ -166,7 +177,7 @@
             </div>
           </div>
           <!-- card-3  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod6.png"
@@ -189,9 +200,11 @@
         </div>
         <!-- category - Furniture  -->
         <h1 class="font-semibold text-[40px] mb-8">Furniture</h1>
-        <div class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14">
+        <div
+          class="cards-container grid gap-6 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 mb-14"
+        >
           <!-- card-1  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod7.png"
@@ -212,7 +225,7 @@
             </div>
           </div>
           <!-- card-2  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod8.png"
@@ -233,7 +246,7 @@
             </div>
           </div>
           <!-- card-3  -->
-          <div class="card bg-[#FFF]">
+          <div onclick="addtoCart(this)" class="card bg-[#FFF] cursor-pointer">
             <figure class="px-10 pt-10">
               <img
                 src="/images/prod9.png"
@@ -265,36 +278,72 @@
           </label>
           <label class="input-group">
             <input
-              class="max-w-[120px] border-0 outline-none"
+              class="max-w-[120px] input input-bordered"
               type="text"
               placeholder="Coupon code"
               class="input input-bordered"
+              id="coupon-input-field"
             />
-            <span class="text-[20px] font-semibold bg-[#E527B2] text-white cursor-pointer py-2">Apply</span>
+            <button
+              id="apply-btn"
+              onclick="calculateDiscount(this)"
+              disabled
+              class="text-[20px] font-semibold bg-[#E527B2] text-white p-2"
+            >
+              Apply
+            </button>
           </label>
         </div>
 
         <!-- cart  -->
-        <div class="cart bg-[#fff] mt-5 p-5">
-          <div class="products-titles-container">
-            <p class="font-medium text-2xl">1. Home Coocker</p>
-            <p class="font-medium text-2xl">1. Home Coocker</p>
-            <p class="font-medium text-2xl">1. Home Coocker</p>
-            <p class="font-medium text-2xl">1. Home Coocker</p>
-            <p class="font-medium text-2xl">1. Home Coocker</p>
+        <div class="cart bg-[#fff] mt-5 p-5 lg:min-w-[300px]">
+          <div class="products-titles-container" id="products-titles-container">
+            <!-- dynamic p will go here  -->
           </div>
-          <hr class="my-3">
+          <hr class="my-3" />
           <div class="product-pricing-container">
-            <p class="text-[20px] font-medium"><span class="">Total price: </span><span class="text-[gray]">257.00TK</span></p>
-            <p class="text-[20px] font-medium"><span class="">Discount: </span><span class="text-[gray]">51.40TK</span></p>
-            <p class="text-[20px] font-medium"><span class="">Total: </span><span class="text-[gray]">205.60TK</span></p>
+            <p class="text-[20px] font-medium">
+              <span class="">Total price: </span
+              ><span id="total-price" class="text-[gray]">00</span
+              ><span class="text-[gray]">TK</span>
+            </p>
+            <p class="text-[20px] font-medium">
+              <span class="">Discount: </span
+              ><span id="discount-span" class="text-[gray]">00</span
+              ><span class="text-[gray]">TK</span>
+            </p>
+            <p class="text-[20px] font-medium">
+              <span class="">Total: </span
+              ><span id="total-span" class="text-[gray]">00</span
+              ><span class="text-[gray]">TK</span>
+            </p>
           </div>
-          <hr class="my-3">
-          <button class="px-5 py-2 rounded-lg text-white w-[100%] bg-[#E527B2] hover:bg-[#e52770] font-semibold text-[20px]">Make Purchase</button>
+          <hr class="my-3" />
+          <button
+            onclick="my_modal_1.showModal()"
+            disabled
+            id="make-purchase-btn"
+            class="px-5 py-2 rounded-lg text-white w-[100%] bg-[#E527B2] font-semibold text-[20px]"
+          >
+            Make Purchase
+          </button>
         </div>
       </div>
       <!-- shopping cart end -->
     </main>
+
+    <!-- modal  -->
+    <dialog id="my_modal_1" class="modal">
+      <form method="dialog" class="modal-box flex flex-col items-center">
+        <img src="./images/congo.png" alt="Congo">
+        <h3 class="font-bold lg:text-5xl md:text-5xl text-3xl">Congratulations</h3>
+        <p class="py-4 lg:text-[20px] md:text-[20px] text-[16px] text-[gray]">You Purchase the product</p>
+        <div class="modal-action">
+          <button onclick="resetAll()" class="btn bg-[#E527B2] hover:bg-[#E527B2] text-white font-semibold text-[20px]">Go Home</button>
+        </div>
+      </form>
+    </dialog>
+
     <script src="js/summer-sale.js"></script>
   </body>
 </html>
